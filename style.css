@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "Outfit";
+    src: url(/Users/miguelrodriguez/repos/admin-dashboard/static/Outfit-Regular.woff2) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Outfit, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 62.5%;
+    --sakura-pink: #fca4b2;
+}
+
+div.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 0.5fr 1fr 7fr;
+}
+
+div.side-bar {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    background-color: var(--sakura-pink, rgb(230, 76, 101));
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+div.side-bar>* {
+    font-size: 3rem;
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+div.search-bar {
+    grid-column: 2;
+    grid-row: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 1rem;
+    gap: 1rem;
+}
+
+div.user-bar {
+    grid-column: 2;
+    grid-row: 2;
+
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0px 2px 3px -2px;
+}
+
+div.content-bar {
+    grid-column: 2;
+    grid-row: 3;
+    background-color: hsl(0, 0%, 83%, 0.3);
+}
+
+img.search-icon,
+img.bell-icon {
+    width: 2rem;
+}
+
+img.user-icon {
+    width: 4rem;
+}
+
+input.search {
+    font-size: 1.5rem;
+    flex: 1;
+    max-width: 60rem;
+    background-color: hsl(0, 0%, 83%, 0.5);
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+span.user-name {
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+button {
+    background-color: var(--sakura-pink, rgb(230, 76, 101));
+    font-size: 2rem;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5em 1em;
+}
+
+.user-bar .user-icon {
+    width: 8rem;
+    height: 8rem;
+}
+
+.user-bar .user-message {
+    margin-right: auto;
+    display: grid;
+}
+
+span:nth-child(1) {
+    font-size: 2rem;
+}
+
+span:nth-child(2) {
+    font-size: 3rem;
+}
+
+.content-bar {
+    display: grid;
+    place-content: center;
+    font-size: 4rem;
+    text-align: center;
+}
